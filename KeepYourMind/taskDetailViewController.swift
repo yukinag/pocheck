@@ -32,12 +32,12 @@ class taskDetailViewController: UIViewController, UITextFieldDelegate, UITextVie
         taskDetailTableView.dataSource = self
         memoContentView.delegate = self
         
+        taskDetailTableView.tableFooterView = UIView()
+        
         configurePickerView()
         configureCell()
-        
-        
     }
-    
+   
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         loadData()

@@ -10,7 +10,6 @@
 		5D25DA5921EC8B0300C27CDB /* CalendarDateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D25DA5821EC8B0300C27CDB /* CalendarDateCell.swift */; };
 		5D81E04921F35B85000998A4 /* pencil@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D81E04821F35B85000998A4 /* pencil@2x.png */; };
 		5D81E04B21F35DA5000998A4 /* calendar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D81E04A21F35DA5000998A4 /* calendar@2x.png */; };
-		5D851B6221DEFFD6002E0F69 /* WorkSpaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D851B6121DEFFD6002E0F69 /* WorkSpaceViewController.swift */; };
 		5D96A10B2206A53F00B247C5 /* iTunesArtwork@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D96A0F62206A53E00B247C5 /* iTunesArtwork@1x.png */; };
 		5D96A10C2206A53F00B247C5 /* Icon-App-76x76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D96A0F82206A53E00B247C5 /* Icon-App-76x76@2x.png */; };
 		5D96A10D2206A53F00B247C5 /* Icon-App-29x29@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D96A0F92206A53E00B247C5 /* Icon-App-29x29@1x.png */; };
@@ -51,7 +50,6 @@
 		5D25DA5821EC8B0300C27CDB /* CalendarDateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDateCell.swift; sourceTree = SOURCE_ROOT; };
 		5D81E04821F35B85000998A4 /* pencil@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pencil@2x.png"; path = "images/pencil@2x.png"; sourceTree = SOURCE_ROOT; };
 		5D81E04A21F35DA5000998A4 /* calendar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "calendar@2x.png"; path = "images/calendar@2x.png"; sourceTree = SOURCE_ROOT; };
-		5D851B6121DEFFD6002E0F69 /* WorkSpaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkSpaceViewController.swift; sourceTree = "<group>"; };
 		5D96A0F62206A53E00B247C5 /* iTunesArtwork@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@1x.png"; sourceTree = "<group>"; };
 		5D96A0F82206A53E00B247C5 /* Icon-App-76x76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-76x76@2x.png"; sourceTree = "<group>"; };
 		5D96A0F92206A53E00B247C5 /* Icon-App-29x29@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-29x29@1x.png"; sourceTree = "<group>"; };
@@ -181,7 +179,6 @@
 				5DF85B2021DB64E1007A95FD /* taskDetailViewController.swift */,
 				5DF85B1221DB61F8007A95FD /* Main.storyboard */,
 				5D25DA5821EC8B0300C27CDB /* CalendarDateCell.swift */,
-				5D851B6121DEFFD6002E0F69 /* WorkSpaceViewController.swift */,
 				5DF85B1521DB61FA007A95FD /* Assets.xcassets */,
 				5DF85B1721DB61FA007A95FD /* LaunchScreen.storyboard */,
 				5DF85B1A21DB61FA007A95FD /* Info.plist */,
@@ -362,7 +359,6 @@
 				5DF85B2121DB64E1007A95FD /* taskDetailViewController.swift in Sources */,
 				5DF85B3021DBCCEA007A95FD /* TaskMemoTableViewCell.swift in Sources */,
 				5DF85B3421DDB19E007A95FD /* TaskTimingOptionTableViewCell.swift in Sources */,
-				5D851B6221DEFFD6002E0F69 /* WorkSpaceViewController.swift in Sources */,
 				5DF85B2421DB65D3007A95FD /* TaskTitleTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

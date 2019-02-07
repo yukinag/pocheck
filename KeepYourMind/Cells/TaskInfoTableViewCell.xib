@@ -36,9 +36,9 @@
                     <constraint firstAttribute="bottomMargin" secondItem="sYD-gb-2M2" secondAttribute="bottom" constant="5" id="FLE-qi-ApS"/>
                     <constraint firstItem="sYD-gb-2M2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="FSl-1r-X9S"/>
                     <constraint firstAttribute="bottomMargin" secondItem="eFE-6R-fca" secondAttribute="bottom" constant="5" id="LtE-8B-DZA"/>
-                    <constraint firstAttribute="trailing" secondItem="sYD-gb-2M2" secondAttribute="trailing" constant="40" id="T1t-lx-2Um"/>
                     <constraint firstItem="sYD-gb-2M2" firstAttribute="leading" secondItem="eFE-6R-fca" secondAttribute="trailing" constant="20" id="Z7f-Vg-5rx"/>
                     <constraint firstItem="eFE-6R-fca" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="bPQ-LN-53P"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="sYD-gb-2M2" secondAttribute="trailing" constant="24" id="kt1-Bo-AGg"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
