@@ -1,0 +1,572 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5D25DA5921EC8B0300C27CDB /* CalendarDateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D25DA5821EC8B0300C27CDB /* CalendarDateCell.swift */; };
+		5D81E04921F35B85000998A4 /* pencil@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D81E04821F35B85000998A4 /* pencil@2x.png */; };
+		5D81E04B21F35DA5000998A4 /* calendar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D81E04A21F35DA5000998A4 /* calendar@2x.png */; };
+		5D851B6221DEFFD6002E0F69 /* WorkSpaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D851B6121DEFFD6002E0F69 /* WorkSpaceViewController.swift */; };
+		5D96A10B2206A53F00B247C5 /* iTunesArtwork@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D96A0F62206A53E00B247C5 /* iTunesArtwork@1x.png */; };
+		5D96A10C2206A53F00B247C5 /* Icon-App-76x76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D96A0F82206A53E00B247C5 /* Icon-App-76x76@2x.png */; };
+		5D96A10D2206A53F00B247C5 /* Icon-App-29x29@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D96A0F92206A53E00B247C5 /* Icon-App-29x29@1x.png */; };
+		5D96A10E2206A53F00B247C5 /* Icon-App-40x40@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D96A0FA2206A53E00B247C5 /* Icon-App-40x40@1x.png */; };
+		5D96A10F2206A53F00B247C5 /* Icon-App-20x20@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D96A0FB2206A53E00B247C5 /* Icon-App-20x20@1x.png */; };
+		5D96A1102206A53F00B247C5 /* Icon-App-83.5x83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D96A0FC2206A53E00B247C5 /* Icon-App-83.5x83.5@2x.png */; };
+		5D96A1112206A53F00B247C5 /* Icon-App-20x20@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D96A0FD2206A53E00B247C5 /* Icon-App-20x20@3x.png */; };
+		5D96A1122206A53F00B247C5 /* ItunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D96A0FE2206A53E00B247C5 /* ItunesArtwork@2x.png */; };
+		5D96A1132206A53F00B247C5 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D96A0FF2206A53E00B247C5 /* Contents.json */; };
+		5D96A1142206A53F00B247C5 /* Icon-App-20x20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D96A1002206A53E00B247C5 /* Icon-App-20x20@2x.png */; };
+		5D96A1152206A53F00B247C5 /* Icon-App-29x29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D96A1012206A53E00B247C5 /* Icon-App-29x29@3x.png */; };
+		5D96A1162206A53F00B247C5 /* Icon-App-40x40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D96A1022206A53E00B247C5 /* Icon-App-40x40@2x.png */; };
+		5D96A1172206A53F00B247C5 /* Icon-App-60x60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D96A1032206A53E00B247C5 /* Icon-App-60x60@3x.png */; };
+		5D96A1182206A53F00B247C5 /* Icon-App-60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D96A1042206A53E00B247C5 /* Icon-App-60x60@2x.png */; };
+		5D96A1192206A53F00B247C5 /* Icon-App-76x76@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D96A1052206A53E00B247C5 /* Icon-App-76x76@1x.png */; };
+		5D96A11A2206A53F00B247C5 /* Icon-App-40x40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D96A1062206A53E00B247C5 /* Icon-App-40x40@3x.png */; };
+		5D96A11B2206A53F00B247C5 /* Icon-App-29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D96A1072206A53E00B247C5 /* Icon-App-29x29@2x.png */; };
+		5D96A11D2206A53F00B247C5 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D96A1092206A53E00B247C5 /* iTunesArtwork@2x.png */; };
+		5D96A11E2206A53F00B247C5 /* iTunesArtwork@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D96A10A2206A53E00B247C5 /* iTunesArtwork@3x.png */; };
+		5DF85B0F21DB61F8007A95FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF85B0E21DB61F8007A95FD /* AppDelegate.swift */; };
+		5DF85B1121DB61F8007A95FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF85B1021DB61F8007A95FD /* ViewController.swift */; };
+		5DF85B1421DB61F8007A95FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DF85B1221DB61F8007A95FD /* Main.storyboard */; };
+		5DF85B1621DB61FA007A95FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DF85B1521DB61FA007A95FD /* Assets.xcassets */; };
+		5DF85B1921DB61FA007A95FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DF85B1721DB61FA007A95FD /* LaunchScreen.storyboard */; };
+		5DF85B2121DB64E1007A95FD /* taskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF85B2021DB64E1007A95FD /* taskDetailViewController.swift */; };
+		5DF85B2421DB65D3007A95FD /* TaskTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF85B2221DB65D3007A95FD /* TaskTitleTableViewCell.swift */; };
+		5DF85B2521DB65D3007A95FD /* TaskTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DF85B2321DB65D3007A95FD /* TaskTitleTableViewCell.xib */; };
+		5DF85B2821DBAD3B007A95FD /* TaskInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF85B2621DBAD3B007A95FD /* TaskInfoTableViewCell.swift */; };
+		5DF85B2921DBAD3B007A95FD /* TaskInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DF85B2721DBAD3B007A95FD /* TaskInfoTableViewCell.xib */; };
+		5DF85B3021DBCCEA007A95FD /* TaskMemoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF85B2E21DBCCEA007A95FD /* TaskMemoTableViewCell.swift */; };
+		5DF85B3121DBCCEA007A95FD /* TaskMemoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DF85B2F21DBCCEA007A95FD /* TaskMemoTableViewCell.xib */; };
+		5DF85B3421DDB19E007A95FD /* TaskTimingOptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF85B3221DDB19E007A95FD /* TaskTimingOptionTableViewCell.swift */; };
+		5DF85B3521DDB19E007A95FD /* TaskTimingOptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DF85B3321DDB19E007A95FD /* TaskTimingOptionTableViewCell.xib */; };
+		9C27A3498CE64517536C3DE9 /* Pods_KeepYourMind.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB09C7304CC25A3E0C43FAEC /* Pods_KeepYourMind.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5D25DA5821EC8B0300C27CDB /* CalendarDateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDateCell.swift; sourceTree = SOURCE_ROOT; };
+		5D81E04821F35B85000998A4 /* pencil@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pencil@2x.png"; path = "images/pencil@2x.png"; sourceTree = SOURCE_ROOT; };
+		5D81E04A21F35DA5000998A4 /* calendar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "calendar@2x.png"; path = "images/calendar@2x.png"; sourceTree = SOURCE_ROOT; };
+		5D851B6121DEFFD6002E0F69 /* WorkSpaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkSpaceViewController.swift; sourceTree = "<group>"; };
+		5D96A0F62206A53E00B247C5 /* iTunesArtwork@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@1x.png"; sourceTree = "<group>"; };
+		5D96A0F82206A53E00B247C5 /* Icon-App-76x76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-76x76@2x.png"; sourceTree = "<group>"; };
+		5D96A0F92206A53E00B247C5 /* Icon-App-29x29@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-29x29@1x.png"; sourceTree = "<group>"; };
+		5D96A0FA2206A53E00B247C5 /* Icon-App-40x40@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-40x40@1x.png"; sourceTree = "<group>"; };
+		5D96A0FB2206A53E00B247C5 /* Icon-App-20x20@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-20x20@1x.png"; sourceTree = "<group>"; };
+		5D96A0FC2206A53E00B247C5 /* Icon-App-83.5x83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-83.5x83.5@2x.png"; sourceTree = "<group>"; };
+		5D96A0FD2206A53E00B247C5 /* Icon-App-20x20@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-20x20@3x.png"; sourceTree = "<group>"; };
+		5D96A0FE2206A53E00B247C5 /* ItunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ItunesArtwork@2x.png"; sourceTree = "<group>"; };
+		5D96A0FF2206A53E00B247C5 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
+		5D96A1002206A53E00B247C5 /* Icon-App-20x20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-20x20@2x.png"; sourceTree = "<group>"; };
+		5D96A1012206A53E00B247C5 /* Icon-App-29x29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-29x29@3x.png"; sourceTree = "<group>"; };
+		5D96A1022206A53E00B247C5 /* Icon-App-40x40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-40x40@2x.png"; sourceTree = "<group>"; };
+		5D96A1032206A53E00B247C5 /* Icon-App-60x60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-60x60@3x.png"; sourceTree = "<group>"; };
+		5D96A1042206A53E00B247C5 /* Icon-App-60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-60x60@2x.png"; sourceTree = "<group>"; };
+		5D96A1052206A53E00B247C5 /* Icon-App-76x76@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-76x76@1x.png"; sourceTree = "<group>"; };
+		5D96A1062206A53E00B247C5 /* Icon-App-40x40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-40x40@3x.png"; sourceTree = "<group>"; };
+		5D96A1072206A53E00B247C5 /* Icon-App-29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-29x29@2x.png"; sourceTree = "<group>"; };
+		5D96A1092206A53E00B247C5 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		5D96A10A2206A53E00B247C5 /* iTunesArtwork@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@3x.png"; sourceTree = "<group>"; };
+		5DF85B0B21DB61F8007A95FD /* KeepYourMind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepYourMind.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DF85B0E21DB61F8007A95FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5DF85B1021DB61F8007A95FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5DF85B1321DB61F8007A95FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5DF85B1521DB61FA007A95FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5DF85B1821DB61FA007A95FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5DF85B1A21DB61FA007A95FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DF85B2021DB64E1007A95FD /* taskDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = taskDetailViewController.swift; sourceTree = "<group>"; };
+		5DF85B2221DB65D3007A95FD /* TaskTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTitleTableViewCell.swift; sourceTree = "<group>"; };
+		5DF85B2321DB65D3007A95FD /* TaskTitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskTitleTableViewCell.xib; sourceTree = "<group>"; };
+		5DF85B2621DBAD3B007A95FD /* TaskInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskInfoTableViewCell.swift; sourceTree = "<group>"; };
+		5DF85B2721DBAD3B007A95FD /* TaskInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskInfoTableViewCell.xib; sourceTree = "<group>"; };
+		5DF85B2E21DBCCEA007A95FD /* TaskMemoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskMemoTableViewCell.swift; sourceTree = "<group>"; };
+		5DF85B2F21DBCCEA007A95FD /* TaskMemoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskMemoTableViewCell.xib; sourceTree = "<group>"; };
+		5DF85B3221DDB19E007A95FD /* TaskTimingOptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTimingOptionTableViewCell.swift; sourceTree = "<group>"; };
+		5DF85B3321DDB19E007A95FD /* TaskTimingOptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskTimingOptionTableViewCell.xib; sourceTree = "<group>"; };
+		6217EADF4A3F0361EAFEBBFC /* Pods-KeepYourMind.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeepYourMind.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KeepYourMind/Pods-KeepYourMind.debug.xcconfig"; sourceTree = "<group>"; };
+		BC95A9E0BB749499CCED5901 /* Pods-KeepYourMind.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeepYourMind.release.xcconfig"; path = "Pods/Target Support Files/Pods-KeepYourMind/Pods-KeepYourMind.release.xcconfig"; sourceTree = "<group>"; };
+		CB09C7304CC25A3E0C43FAEC /* Pods_KeepYourMind.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeepYourMind.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5DF85B0821DB61F8007A95FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C27A3498CE64517536C3DE9 /* Pods_KeepYourMind.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0E6400EB21F723EB007623EB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5DF85B2621DBAD3B007A95FD /* TaskInfoTableViewCell.swift */,
+				5DF85B2721DBAD3B007A95FD /* TaskInfoTableViewCell.xib */,
+				5DF85B3221DDB19E007A95FD /* TaskTimingOptionTableViewCell.swift */,
+				5DF85B3321DDB19E007A95FD /* TaskTimingOptionTableViewCell.xib */,
+				5DF85B2E21DBCCEA007A95FD /* TaskMemoTableViewCell.swift */,
+				5DF85B2F21DBCCEA007A95FD /* TaskMemoTableViewCell.xib */,
+				5DF85B2221DB65D3007A95FD /* TaskTitleTableViewCell.swift */,
+				5DF85B2321DB65D3007A95FD /* TaskTitleTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		5D96A0F52206A53E00B247C5 /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				5D96A0F62206A53E00B247C5 /* iTunesArtwork@1x.png */,
+				5D96A0F72206A53E00B247C5 /* AppIcon.appiconset */,
+				5D96A1092206A53E00B247C5 /* iTunesArtwork@2x.png */,
+				5D96A10A2206A53E00B247C5 /* iTunesArtwork@3x.png */,
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
+		5D96A0F72206A53E00B247C5 /* AppIcon.appiconset */ = {
+			isa = PBXGroup;
+			children = (
+				5D96A0F82206A53E00B247C5 /* Icon-App-76x76@2x.png */,
+				5D96A0F92206A53E00B247C5 /* Icon-App-29x29@1x.png */,
+				5D96A0FA2206A53E00B247C5 /* Icon-App-40x40@1x.png */,
+				5D96A0FB2206A53E00B247C5 /* Icon-App-20x20@1x.png */,
+				5D96A0FC2206A53E00B247C5 /* Icon-App-83.5x83.5@2x.png */,
+				5D96A0FD2206A53E00B247C5 /* Icon-App-20x20@3x.png */,
+				5D96A0FE2206A53E00B247C5 /* ItunesArtwork@2x.png */,
+				5D96A1002206A53E00B247C5 /* Icon-App-20x20@2x.png */,
+				5D96A0FF2206A53E00B247C5 /* Contents.json */,
+				5D96A1012206A53E00B247C5 /* Icon-App-29x29@3x.png */,
+				5D96A1022206A53E00B247C5 /* Icon-App-40x40@2x.png */,
+				5D96A1032206A53E00B247C5 /* Icon-App-60x60@3x.png */,
+				5D96A1042206A53E00B247C5 /* Icon-App-60x60@2x.png */,
+				5D96A1052206A53E00B247C5 /* Icon-App-76x76@1x.png */,
+				5D96A1062206A53E00B247C5 /* Icon-App-40x40@3x.png */,
+				5D96A1072206A53E00B247C5 /* Icon-App-29x29@2x.png */,
+			);
+			path = AppIcon.appiconset;
+			sourceTree = "<group>";
+		};
+		5DF85B0221DB61F8007A95FD = {
+			isa = PBXGroup;
+			children = (
+				5DF85B0D21DB61F8007A95FD /* KeepYourMind */,
+				5DF85B0C21DB61F8007A95FD /* Products */,
+				EEAC8472F85B09016D6604D5 /* Pods */,
+				BCEAF9CA84412E3D6D4B6A45 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5DF85B0C21DB61F8007A95FD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5DF85B0B21DB61F8007A95FD /* KeepYourMind.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5DF85B0D21DB61F8007A95FD /* KeepYourMind */ = {
+			isa = PBXGroup;
+			children = (
+				5D96A0F52206A53E00B247C5 /* ios */,
+				0E6400EB21F723EB007623EB /* Cells */,
+				5DF85B0E21DB61F8007A95FD /* AppDelegate.swift */,
+				5DF85B1021DB61F8007A95FD /* ViewController.swift */,
+				5DF85B2021DB64E1007A95FD /* taskDetailViewController.swift */,
+				5DF85B1221DB61F8007A95FD /* Main.storyboard */,
+				5D25DA5821EC8B0300C27CDB /* CalendarDateCell.swift */,
+				5D851B6121DEFFD6002E0F69 /* WorkSpaceViewController.swift */,
+				5DF85B1521DB61FA007A95FD /* Assets.xcassets */,
+				5DF85B1721DB61FA007A95FD /* LaunchScreen.storyboard */,
+				5DF85B1A21DB61FA007A95FD /* Info.plist */,
+				5D81E04A21F35DA5000998A4 /* calendar@2x.png */,
+				5D81E04821F35B85000998A4 /* pencil@2x.png */,
+			);
+			path = KeepYourMind;
+			sourceTree = "<group>";
+		};
+		BCEAF9CA84412E3D6D4B6A45 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB09C7304CC25A3E0C43FAEC /* Pods_KeepYourMind.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EEAC8472F85B09016D6604D5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6217EADF4A3F0361EAFEBBFC /* Pods-KeepYourMind.debug.xcconfig */,
+				BC95A9E0BB749499CCED5901 /* Pods-KeepYourMind.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5DF85B0A21DB61F8007A95FD /* KeepYourMind */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DF85B1D21DB61FA007A95FD /* Build configuration list for PBXNativeTarget "KeepYourMind" */;
+			buildPhases = (
+				1B1FB200DFE9851FD864030D /* [CP] Check Pods Manifest.lock */,
+				5DF85B0721DB61F8007A95FD /* Sources */,
+				5DF85B0821DB61F8007A95FD /* Frameworks */,
+				5DF85B0921DB61F8007A95FD /* Resources */,
+				8F4ED2EF027F23FCC9BB4E62 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KeepYourMind;
+			productName = KeepYourMind;
+			productReference = 5DF85B0B21DB61F8007A95FD /* KeepYourMind.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5DF85B0321DB61F8007A95FD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "yuki-n.inc";
+				TargetAttributes = {
+					5DF85B0A21DB61F8007A95FD = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 5DF85B0621DB61F8007A95FD /* Build configuration list for PBXProject "KeepYourMind" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5DF85B0221DB61F8007A95FD;
+			productRefGroup = 5DF85B0C21DB61F8007A95FD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5DF85B0A21DB61F8007A95FD /* KeepYourMind */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5DF85B0921DB61F8007A95FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DF85B3521DDB19E007A95FD /* TaskTimingOptionTableViewCell.xib in Resources */,
+				5DF85B3121DBCCEA007A95FD /* TaskMemoTableViewCell.xib in Resources */,
+				5DF85B2921DBAD3B007A95FD /* TaskInfoTableViewCell.xib in Resources */,
+				5D96A1162206A53F00B247C5 /* Icon-App-40x40@2x.png in Resources */,
+				5D96A1112206A53F00B247C5 /* Icon-App-20x20@3x.png in Resources */,
+				5D96A11E2206A53F00B247C5 /* iTunesArtwork@3x.png in Resources */,
+				5D96A1172206A53F00B247C5 /* Icon-App-60x60@3x.png in Resources */,
+				5D96A1182206A53F00B247C5 /* Icon-App-60x60@2x.png in Resources */,
+				5DF85B1921DB61FA007A95FD /* LaunchScreen.storyboard in Resources */,
+				5D96A11B2206A53F00B247C5 /* Icon-App-29x29@2x.png in Resources */,
+				5D96A1152206A53F00B247C5 /* Icon-App-29x29@3x.png in Resources */,
+				5D96A1142206A53F00B247C5 /* Icon-App-20x20@2x.png in Resources */,
+				5D96A11A2206A53F00B247C5 /* Icon-App-40x40@3x.png in Resources */,
+				5D96A1102206A53F00B247C5 /* Icon-App-83.5x83.5@2x.png in Resources */,
+				5DF85B1621DB61FA007A95FD /* Assets.xcassets in Resources */,
+				5D96A10C2206A53F00B247C5 /* Icon-App-76x76@2x.png in Resources */,
+				5D81E04921F35B85000998A4 /* pencil@2x.png in Resources */,
+				5D96A10F2206A53F00B247C5 /* Icon-App-20x20@1x.png in Resources */,
+				5D96A10E2206A53F00B247C5 /* Icon-App-40x40@1x.png in Resources */,
+				5D96A1132206A53F00B247C5 /* Contents.json in Resources */,
+				5D96A10B2206A53F00B247C5 /* iTunesArtwork@1x.png in Resources */,
+				5DF85B1421DB61F8007A95FD /* Main.storyboard in Resources */,
+				5D81E04B21F35DA5000998A4 /* calendar@2x.png in Resources */,
+				5D96A11D2206A53F00B247C5 /* iTunesArtwork@2x.png in Resources */,
+				5D96A1122206A53F00B247C5 /* ItunesArtwork@2x.png in Resources */,
+				5DF85B2521DB65D3007A95FD /* TaskTitleTableViewCell.xib in Resources */,
+				5D96A10D2206A53F00B247C5 /* Icon-App-29x29@1x.png in Resources */,
+				5D96A1192206A53F00B247C5 /* Icon-App-76x76@1x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1B1FB200DFE9851FD864030D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KeepYourMind-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F4ED2EF027F23FCC9BB4E62 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-KeepYourMind/Pods-KeepYourMind-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/PMAlertController/PMAlertController.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PMAlertController.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KeepYourMind/Pods-KeepYourMind-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5DF85B0721DB61F8007A95FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DF85B2821DBAD3B007A95FD /* TaskInfoTableViewCell.swift in Sources */,
+				5D25DA5921EC8B0300C27CDB /* CalendarDateCell.swift in Sources */,
+				5DF85B1121DB61F8007A95FD /* ViewController.swift in Sources */,
+				5DF85B0F21DB61F8007A95FD /* AppDelegate.swift in Sources */,
+				5DF85B2121DB64E1007A95FD /* taskDetailViewController.swift in Sources */,
+				5DF85B3021DBCCEA007A95FD /* TaskMemoTableViewCell.swift in Sources */,
+				5DF85B3421DDB19E007A95FD /* TaskTimingOptionTableViewCell.swift in Sources */,
+				5D851B6221DEFFD6002E0F69 /* WorkSpaceViewController.swift in Sources */,
+				5DF85B2421DB65D3007A95FD /* TaskTitleTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5DF85B1221DB61F8007A95FD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5DF85B1321DB61F8007A95FD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5DF85B1721DB61FA007A95FD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5DF85B1821DB61FA007A95FD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5DF85B1B21DB61FA007A95FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5DF85B1C21DB61FA007A95FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5DF85B1E21DB61FA007A95FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6217EADF4A3F0361EAFEBBFC /* Pods-KeepYourMind.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PBZMLRRYHL;
+				INFOPLIST_FILE = KeepYourMind/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yuki-n.KeepYourMind";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5DF85B1F21DB61FA007A95FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC95A9E0BB749499CCED5901 /* Pods-KeepYourMind.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PBZMLRRYHL;
+				INFOPLIST_FILE = KeepYourMind/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yuki-n.KeepYourMind";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5DF85B0621DB61F8007A95FD /* Build configuration list for PBXProject "KeepYourMind" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DF85B1B21DB61FA007A95FD /* Debug */,
+				5DF85B1C21DB61FA007A95FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5DF85B1D21DB61FA007A95FD /* Build configuration list for PBXNativeTarget "KeepYourMind" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DF85B1E21DB61FA007A95FD /* Debug */,
+				5DF85B1F21DB61FA007A95FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5DF85B0321DB61F8007A95FD /* Project object */;
+}
