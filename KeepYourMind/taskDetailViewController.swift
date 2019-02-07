@@ -14,8 +14,8 @@ class taskDetailViewController: UIViewController, UITextFieldDelegate, UITextVie
     
     @IBOutlet var taskDetailTableView: UITableView!
     
-    var indexLabel = ["", "いつから", "いつまで", "頻度", "どのくらい","何を", "どうする", ""]
-    var placeHolders = ["タイトルを入力", "日付を入力", "日付を入力","(例)毎日","（例）15分", "入力", "入力"]
+    var indexLabel = ["", "いつから", "いつまで", "頻度", "どのくらい","何をする", ""]
+    var placeHolders = ["目標/タスクを入力", "日付を入力", "日付を入力","(例)毎日","（例）15分", "入力", "入力"]
     
     //timing Picker
     var timingTextField = UITextField()
@@ -58,10 +58,10 @@ class taskDetailViewController: UIViewController, UITextFieldDelegate, UITextVie
     //キーボード
     @objc func keyboardWillShow(notification: Notification?) {
         //セル指定
-        let howDoCell = taskDetailTableView.cellForRow(at: IndexPath(row: 6, section: 0)) as! TaskInfoTableViewCell
-        let memoCell = taskDetailTableView.cellForRow(at: IndexPath(row: 7, section: 0)) as! TaskMemoTableViewCell
+
+        let memoCell = taskDetailTableView.cellForRow(at: IndexPath(row: 6, section: 0)) as! TaskMemoTableViewCell
         
-        if howDoCell.taskTextField.isEditing == true || memoCell.memoContent.isFirstResponder == true {
+        if memoCell.memoContent.isFirstResponder == true {
             let rect = (notification?.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue )?.cgRectValue
             let duration: TimeInterval? = notification?.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double
             UIView.animate(withDuration: duration!, animations: { () in
@@ -164,20 +164,25 @@ class taskDetailViewController: UIViewController, UITextFieldDelegate, UITextVie
         let whatUserDefault = UserDefaults.standard
         whatUserDefault.set(whatCell.taskTextField.text, forKey: "what")
         whatUserDefault.synchronize()
-        
-        //どうする
-        let howDoCell = taskDetailTableView.cellForRow(at: IndexPath(row: 6, section: 0)) as! TaskInfoTableViewCell
-        let howDoUserDefault = UserDefaults.standard
-        howDoUserDefault.set(howDoCell.taskTextField.text, forKey: "howDo")
-        howDoUserDefault.synchronize()
-        
+     
         //メモ
-        let memoCell = taskDetailTableView.cellForRow(at: IndexPath(row: 7, section: 0)) as! TaskMemoTableViewCell
+        let memoCell = taskDetailTableView.cellForRow(at: IndexPath(row: 6, section: 0)) as! TaskMemoTableViewCell
         let memoUserDefault = UserDefaults.standard
         memoUserDefault.set(memoCell.memoContent.text, forKey: "memo")
         memoUserDefault.synchronize()
         print(memoCell.memoContent.text)
         print("thisismemo")
+        
+        //アラートのひょうじ
+        let alert = UIAlertController(title: "Saved!!", message: "タスク内容が保存されました", preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: .default){ (action) in
+            //OK押した時のアクション
+            alert.dismiss(animated: true, completion: nil)
+        }
+        
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
         
     }
     
@@ -235,15 +240,10 @@ class taskDetailViewController: UIViewController, UITextFieldDelegate, UITextVie
         let what = UserDefaults.standard.string(forKey: "what")
         let whatCell = taskDetailTableView.cellForRow(at: IndexPath(row: 5, section: 0)) as! TaskInfoTableViewCell
         whatCell.taskTextField.text = what
-        
-        //どうする
-        let howDo = UserDefaults.standard.string(forKey: "howDo")
-        let howDoCell = taskDetailTableView.cellForRow(at: IndexPath(row: 6, section: 0)) as! TaskInfoTableViewCell
-        howDoCell.taskTextField.text = howDo
-        
+  
         //メモ内容
         let memo = UserDefaults.standard.string(forKey: "memo")
-        let memoCell = taskDetailTableView.cellForRow(at: IndexPath(row: 7, section: 0)) as! TaskMemoTableViewCell
+        let memoCell = taskDetailTableView.cellForRow(at: IndexPath(row: 6, section: 0)) as! TaskMemoTableViewCell
         memoCell.memoContent.text = memo
     }
 }
@@ -279,7 +279,7 @@ extension taskDetailViewController: UITableViewDelegate, UITableViewDataSource {
             
             return timingCell
             
-        case 7:
+        case 6:
             let memoCell = taskDetailTableView.dequeueReusableCell(withIdentifier: "MemoCell") as! TaskMemoTableViewCell
             memoCell.memoContent.delegate = self
             memoCell.memoContent.inputAccessoryView = memoContentView.inputAccessoryView
