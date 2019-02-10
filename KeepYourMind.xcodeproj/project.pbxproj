@@ -29,6 +29,8 @@
 		5D96A11B2206A53F00B247C5 /* Icon-App-29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D96A1072206A53E00B247C5 /* Icon-App-29x29@2x.png */; };
 		5D96A11D2206A53F00B247C5 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D96A1092206A53E00B247C5 /* iTunesArtwork@2x.png */; };
 		5D96A11E2206A53F00B247C5 /* iTunesArtwork@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D96A10A2206A53E00B247C5 /* iTunesArtwork@3x.png */; };
+		5DCFB88D22105A2700DAB9C6 /* TaskDatePickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFB88B22105A2700DAB9C6 /* TaskDatePickerTableViewCell.swift */; };
+		5DCFB88E22105A2700DAB9C6 /* TaskDatePickerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DCFB88C22105A2700DAB9C6 /* TaskDatePickerTableViewCell.xib */; };
 		5DF85B0F21DB61F8007A95FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF85B0E21DB61F8007A95FD /* AppDelegate.swift */; };
 		5DF85B1121DB61F8007A95FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF85B1021DB61F8007A95FD /* ViewController.swift */; };
 		5DF85B1421DB61F8007A95FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DF85B1221DB61F8007A95FD /* Main.storyboard */; };
@@ -69,6 +71,8 @@
 		5D96A1072206A53E00B247C5 /* Icon-App-29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-29x29@2x.png"; sourceTree = "<group>"; };
 		5D96A1092206A53E00B247C5 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		5D96A10A2206A53E00B247C5 /* iTunesArtwork@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@3x.png"; sourceTree = "<group>"; };
+		5DCFB88B22105A2700DAB9C6 /* TaskDatePickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDatePickerTableViewCell.swift; sourceTree = "<group>"; };
+		5DCFB88C22105A2700DAB9C6 /* TaskDatePickerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskDatePickerTableViewCell.xib; sourceTree = "<group>"; };
 		5DF85B0B21DB61F8007A95FD /* KeepYourMind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepYourMind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DF85B0E21DB61F8007A95FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DF85B1021DB61F8007A95FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				5DF85B2621DBAD3B007A95FD /* TaskInfoTableViewCell.swift */,
+				5DCFB88B22105A2700DAB9C6 /* TaskDatePickerTableViewCell.swift */,
+				5DCFB88C22105A2700DAB9C6 /* TaskDatePickerTableViewCell.xib */,
 				5DF85B2721DBAD3B007A95FD /* TaskInfoTableViewCell.xib */,
 				5DF85B3221DDB19E007A95FD /* TaskTimingOptionTableViewCell.swift */,
 				5DF85B3321DDB19E007A95FD /* TaskTimingOptionTableViewCell.xib */,
@@ -273,6 +279,7 @@
 				5D96A11E2206A53F00B247C5 /* iTunesArtwork@3x.png in Resources */,
 				5D96A1172206A53F00B247C5 /* Icon-App-60x60@3x.png in Resources */,
 				5D96A1182206A53F00B247C5 /* Icon-App-60x60@2x.png in Resources */,
+				5DCFB88E22105A2700DAB9C6 /* TaskDatePickerTableViewCell.xib in Resources */,
 				5DF85B1921DB61FA007A95FD /* LaunchScreen.storyboard in Resources */,
 				5D96A11B2206A53F00B247C5 /* Icon-App-29x29@2x.png in Resources */,
 				5D96A1152206A53F00B247C5 /* Icon-App-29x29@3x.png in Resources */,
@@ -353,6 +360,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DF85B2821DBAD3B007A95FD /* TaskInfoTableViewCell.swift in Sources */,
+				5DCFB88D22105A2700DAB9C6 /* TaskDatePickerTableViewCell.swift in Sources */,
 				5D25DA5921EC8B0300C27CDB /* CalendarDateCell.swift in Sources */,
 				5DF85B1121DB61F8007A95FD /* ViewController.swift in Sources */,
 				5DF85B0F21DB61F8007A95FD /* AppDelegate.swift in Sources */,

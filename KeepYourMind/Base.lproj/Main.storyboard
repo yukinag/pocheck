@@ -28,11 +28,11 @@
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1200" id="YKU-xp-0IO"/>
                                         </constraints>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" indentationWidth="10" rowHeight="44" id="yEy-6Y-79C">
-                                                <rect key="frame" x="0.0" y="28" width="366" height="44"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" indentationWidth="10" rowHeight="80" id="yEy-6Y-79C">
+                                                <rect key="frame" x="0.0" y="28" width="366" height="80"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" tableViewCell="yEy-6Y-79C" id="mb2-EK-oM4">
-                                                    <rect key="frame" x="0.0" y="0.0" width="366" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="366" height="79.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </tableViewCellContentView>
                                             </tableViewCell>
@@ -231,10 +231,10 @@
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GhV-Hz-S4C">
-                                                            <rect key="frame" x="1" y="13" width="48" height="24"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GhV-Hz-S4C">
+                                                            <rect key="frame" x="-1" y="13.5" width="52" height="23.5"/>
+                                                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="21"/>
+                                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
