@@ -13,8 +13,8 @@ class taskDetailViewController: UIViewController, UITextFieldDelegate, UITextVie
     
     @IBOutlet var taskDetailTableView: UITableView!
     
-    var indexLabel = ["", "いつから", "いつまで", "頻度", "どのくらい","何をする", ""]
-    var placeHolders = ["目標/タスクを入力", "日付を入力", "日付を入力","(例)毎日","（例）15分", "入力", "入力"]
+    var indexLabel = ["", "いつから", "いつまで", "頻度", "どのくらい","何をする", "通知（毎日）",""]
+    var placeHolders = ["目標/タスクを入力", "日付を入力", "日付を入力","(例)毎日","（例）15分", "入力", "セットする",""]
     
     //timing Picker
     var timingTextField = UITextField()
@@ -60,7 +60,7 @@ class taskDetailViewController: UIViewController, UITextFieldDelegate, UITextVie
     @objc func keyboardWillShow(notification: Notification?) {
         //セル指定
 
-        let memoCell = taskDetailTableView.cellForRow(at: IndexPath(row: 6, section: 0)) as! TaskMemoTableViewCell
+        let memoCell = taskDetailTableView.cellForRow(at: IndexPath(row: 7, section: 0)) as! TaskMemoTableViewCell
         
         if memoCell.memoContent.isFirstResponder == true {
             let rect = (notification?.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue )?.cgRectValue
@@ -169,9 +169,16 @@ class taskDetailViewController: UIViewController, UITextFieldDelegate, UITextVie
         let whatUserDefault = UserDefaults.standard
         whatUserDefault.set(whatCell.taskTextField.text, forKey: "what")
         whatUserDefault.synchronize()
+        
+        //アラート
+        let alertCell = taskDetailTableView.cellForRow(at: IndexPath(row: 6, section: 0)) as! TaskDatePickerTableViewCell
+        let alertTimeUserDefault = UserDefaults.standard
+        alertTimeUserDefault.set(alertCell.dateTextField.text, forKey: "alertTime")
+        alertTimeUserDefault.synchronize()
+        print(alertTimeUserDefault)
      
         //メモ
-        let memoCell = taskDetailTableView.cellForRow(at: IndexPath(row: 6, section: 0)) as! TaskMemoTableViewCell
+        let memoCell = taskDetailTableView.cellForRow(at: IndexPath(row: 7, section: 0)) as! TaskMemoTableViewCell
         let memoUserDefault = UserDefaults.standard
         memoUserDefault.set(memoCell.memoContent.text, forKey: "memo")
         memoUserDefault.synchronize()
@@ -194,7 +201,6 @@ class taskDetailViewController: UIViewController, UITextFieldDelegate, UITextVie
     /* date picker 関連の処理 */
     @objc func done() {
         self.timingTextField.endEditing(true)
-        print("success")
         taskDetailTableView.reloadData()
     }
     
@@ -202,7 +208,7 @@ class taskDetailViewController: UIViewController, UITextFieldDelegate, UITextVie
         let datePickerCell = taskDetailTableView.cellForRow(at: IndexPath(row: 1, section: 0)) as! TaskDatePickerTableViewCell
         let dateFormatter = DateFormatter()
         // 持ってくるデータのフォーマットを設定
-        dateFormatter.dateStyle = .medium
+        dateFormatter.dateStyle = .long
         dateFormatter.timeStyle = .none
         dateFormatter.locale    = NSLocale(localeIdentifier: "ja_JP") as Locale
         dateFormatter.dateStyle = DateFormatter.Style.medium
@@ -216,10 +222,21 @@ class taskDetailViewController: UIViewController, UITextFieldDelegate, UITextVie
         let datePickerCell = taskDetailTableView.cellForRow(at: IndexPath(row: 2, section: 0)) as! TaskDatePickerTableViewCell
         let dateFormatter = DateFormatter()
         // 持ってくるデータのフォーマットを設定
-        dateFormatter.dateStyle = .medium
+        dateFormatter.dateStyle = .long
         dateFormatter.timeStyle = .none
         dateFormatter.locale    = NSLocale(localeIdentifier: "ja_JP") as Locale
         dateFormatter.dateStyle = DateFormatter.Style.medium
+        // textFieldに選択した日付を代入
+        datePickerCell.dateTextField.text = dateFormatter.string(from: termDatePicker.date)
+        // キーボードを閉じる
+        self.view.endEditing(true)
+    }
+    
+    @objc func doneAlertPicker() {
+        let datePickerCell = taskDetailTableView.cellForRow(at: IndexPath(row: 6, section: 0)) as! TaskDatePickerTableViewCell
+    
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
         // textFieldに選択した日付を代入
         datePickerCell.dateTextField.text = dateFormatter.string(from: termDatePicker.date)
         // キーボードを閉じる
@@ -230,6 +247,24 @@ class taskDetailViewController: UIViewController, UITextFieldDelegate, UITextVie
         self.timingTextField.text = ""
         self.timingTextField.endEditing(true)
         taskDetailTableView.reloadData()
+    }
+    
+    @objc func cancelStartDate() {
+         let datePickerCell = taskDetailTableView.cellForRow(at: IndexPath(row: 1, section: 0)) as! TaskDatePickerTableViewCell
+        datePickerCell.dateTextField.text = ""
+        datePickerCell.dateTextField.endEditing(true)
+    }
+    
+    @objc func cancelEndDate() {
+        let datePickerCell = taskDetailTableView.cellForRow(at: IndexPath(row: 2, section: 0)) as! TaskDatePickerTableViewCell
+        datePickerCell.dateTextField.text = ""
+        datePickerCell.dateTextField.endEditing(true)
+    }
+    
+    @objc func cancelAlertDate() {
+        let datePickerCell = taskDetailTableView.cellForRow(at: IndexPath(row: 6, section: 0)) as! TaskDatePickerTableViewCell
+        datePickerCell.dateTextField.text = ""
+        datePickerCell.dateTextField.endEditing(true)
     }
     
     //キーボード操作
@@ -275,10 +310,16 @@ class taskDetailViewController: UIViewController, UITextFieldDelegate, UITextVie
         let whatCell = taskDetailTableView.cellForRow(at: IndexPath(row: 5, section: 0)) as! TaskInfoTableViewCell
         whatCell.taskTextField.text = what
   
+        //アラート
+        let alertTime = UserDefaults.standard.string(forKey: "alertTime")
+        let alertCell = taskDetailTableView.cellForRow(at: IndexPath(row: 6, section: 0)) as! TaskDatePickerTableViewCell
+        alertCell.dateTextField.text = alertTime
+        
         //メモ内容
         let memo = UserDefaults.standard.string(forKey: "memo")
-        let memoCell = taskDetailTableView.cellForRow(at: IndexPath(row: 6, section: 0)) as! TaskMemoTableViewCell
+        let memoCell = taskDetailTableView.cellForRow(at: IndexPath(row: 7, section: 0)) as! TaskMemoTableViewCell
         memoCell.memoContent.text = memo
+ 
     }
 }
 
@@ -313,7 +354,7 @@ extension taskDetailViewController: UITableViewDelegate, UITableViewDataSource {
             
             let pickerToolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 0, height: 35))
             let doneItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(taskDetailViewController.doneStartDate))
-            let cancelItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(taskDetailViewController.cancel))
+            let cancelItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(taskDetailViewController.cancelStartDate))
             //アイテムをセット
             pickerToolBar.setItems([doneItem, cancelItem], animated: true)
         
@@ -324,8 +365,8 @@ extension taskDetailViewController: UITableViewDelegate, UITableViewDataSource {
     
             return datePickerCell
             
-        case 2:
             
+        case 2:
             let datePickerCell = taskDetailTableView.dequeueReusableCell(withIdentifier: "DatePickerCell") as! TaskDatePickerTableViewCell
             
             termDatePicker.datePickerMode = .date
@@ -333,12 +374,12 @@ extension taskDetailViewController: UITableViewDelegate, UITableViewDataSource {
             
             let pickerToolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 0, height: 35))
             let doneItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(taskDetailViewController.doneEndDate))
-            let cancelItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(taskDetailViewController.cancel))
+            let cancelItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(taskDetailViewController.cancelEndDate))
             //アイテムをセット
             pickerToolBar.setItems([doneItem, cancelItem], animated: true)
             
             datePickerCell.taskIndexLabel.text = indexLabel[indexPath.row]
-            datePickerCell.dateTextField.placeholder = placeHolders[1]
+            datePickerCell.dateTextField.placeholder = placeHolders[2]
             datePickerCell.dateTextField.inputView = termDatePicker
             datePickerCell.dateTextField.inputAccessoryView = pickerToolBar
             
@@ -354,6 +395,24 @@ extension taskDetailViewController: UITableViewDelegate, UITableViewDataSource {
             return timingCell
             
         case 6:
+            let alertCell = taskDetailTableView.dequeueReusableCell(withIdentifier: "DatePickerCell") as! TaskDatePickerTableViewCell
+            
+            termDatePicker.datePickerMode = .time
+            termDatePicker.locale = NSLocale(localeIdentifier: "ja_JP") as Locale
+            let pickerToolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 0, height: 35))
+            let doneItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(taskDetailViewController.doneAlertPicker))
+            let cancelItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(taskDetailViewController.cancelAlertDate))
+            //アイテムをセット
+            pickerToolBar.setItems([doneItem, cancelItem], animated: true)
+            
+            alertCell.taskIndexLabel.text = indexLabel[indexPath.row]
+            alertCell.dateTextField.placeholder = placeHolders[6]
+            alertCell.dateTextField.inputView = termDatePicker
+            alertCell.dateTextField.inputAccessoryView = pickerToolBar
+            
+            return alertCell
+            
+        case 7:
             let memoCell = taskDetailTableView.dequeueReusableCell(withIdentifier: "MemoCell") as! TaskMemoTableViewCell
             memoCell.memoContent.delegate = self
             memoCell.memoContent.inputAccessoryView = memoContentView.inputAccessoryView
