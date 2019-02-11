@@ -8,6 +8,9 @@
 //
 
 import UIKit
+import UserNotifications
+
+
 
 class taskDetailViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     
@@ -24,6 +27,7 @@ class taskDetailViewController: UIViewController, UITextFieldDelegate, UITextVie
     
     //期間picker
     var termDatePicker = UIDatePicker()
+    var alertTimePicker = UIDatePicker()
     
     
     override func viewDidLoad() {
@@ -36,6 +40,23 @@ class taskDetailViewController: UIViewController, UITextFieldDelegate, UITextVie
         
         configurePickerView()
         configureCell()
+        
+        // 通知許可ダイアログを表示
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .sound, .badge]) {
+            (granted, error) in
+            // エラー処理
+        }
+        
+        // 通知内容の設定
+        let content = UNMutableNotificationContent()
+        // 通知のタイトルを設定
+        content.title = NSString.localizedUserNotificationString(forKey: "Title", arguments: nil)
+        // 通知の本文を設定
+        content.body = NSString.localizedUserNotificationString(forKey: "Message", arguments: nil)
+        // 通知の音楽を設定
+        //content.sound = UNNotificationSound.default()
+
     }
     
    
@@ -184,6 +205,22 @@ class taskDetailViewController: UIViewController, UITextFieldDelegate, UITextVie
         memoUserDefault.synchronize()
         print(memoCell.memoContent.text)
         print("thisismemo")
+        /*
+        if alertCell.dateTextField.text != nil {
+            
+            let dateFormater = DateFormatter()
+            dateFormater.locale = Locale(identifier: "ja_JP")
+            dateFormater.dateFormat = "HH"
+            // 設定に必要なクラスをインスタンス化
+            var notificationTime = DateComponents()
+            let trigger: UNNotificationTrigger
+            notificationTime.hour = dateFormater.date(from: alertCell.dateTextField.text!)
+          //  notificationTime.hour = date.
+            
+            // 12時に通知する場合
+            trigger = UNCalendarNotificationTrigger(dateMatching: notificationTime, repeats: false)
+        }*/
+        
         
         //アラートのひょうじ
         let alert = UIAlertController(title: "完了", message: "タスク内容が保存されました", preferredStyle: .alert)
@@ -349,7 +386,9 @@ extension taskDetailViewController: UITableViewDelegate, UITableViewDataSource {
         
             let datePickerCell = taskDetailTableView.dequeueReusableCell(withIdentifier: "DatePickerCell") as! TaskDatePickerTableViewCell
             
-            termDatePicker.datePickerMode = .date
+            //let dateFormatter = DateFormatter()
+            
+            termDatePicker.datePickerMode = UIDatePicker.Mode.date
             termDatePicker.locale = NSLocale(localeIdentifier: "ja_JP") as Locale
             
             let pickerToolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 0, height: 35))
@@ -397,8 +436,8 @@ extension taskDetailViewController: UITableViewDelegate, UITableViewDataSource {
         case 6:
             let alertCell = taskDetailTableView.dequeueReusableCell(withIdentifier: "DatePickerCell") as! TaskDatePickerTableViewCell
             
-            termDatePicker.datePickerMode = .time
-            termDatePicker.locale = NSLocale(localeIdentifier: "ja_JP") as Locale
+            alertTimePicker.datePickerMode = .time
+            alertTimePicker.locale = NSLocale(localeIdentifier: "ja_JP") as Locale
             let pickerToolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 0, height: 35))
             let doneItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(taskDetailViewController.doneAlertPicker))
             let cancelItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(taskDetailViewController.cancelAlertDate))
@@ -407,7 +446,7 @@ extension taskDetailViewController: UITableViewDelegate, UITableViewDataSource {
             
             alertCell.taskIndexLabel.text = indexLabel[indexPath.row]
             alertCell.dateTextField.placeholder = placeHolders[6]
-            alertCell.dateTextField.inputView = termDatePicker
+            alertCell.dateTextField.inputView = alertTimePicker
             alertCell.dateTextField.inputAccessoryView = pickerToolBar
             
             return alertCell
