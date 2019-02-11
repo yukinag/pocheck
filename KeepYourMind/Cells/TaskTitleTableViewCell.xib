@@ -28,7 +28,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottomMargin" secondItem="Dv8-0S-5t3" secondAttribute="bottom" constant="20" id="N3b-cb-1IB"/>
-                    <constraint firstItem="Dv8-0S-5t3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="20" id="Stq-et-9OV"/>
+                    <constraint firstItem="Dv8-0S-5t3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="22" id="Stq-et-9OV"/>
                     <constraint firstItem="Dv8-0S-5t3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="20" id="olE-Z1-LU0"/>
                     <constraint firstAttribute="trailingMargin" secondItem="Dv8-0S-5t3" secondAttribute="trailing" constant="20" id="yQn-sy-IS4"/>
                 </constraints>
