@@ -46,17 +46,8 @@ class taskDetailViewController: UIViewController, UITextFieldDelegate, UITextVie
         center.requestAuthorization(options: [.alert, .sound, .badge]) {
             (granted, error) in
             // エラー処理
+            
         }
-        
-        // 通知内容の設定
-        let content = UNMutableNotificationContent()
-        // 通知のタイトルを設定
-        content.title = NSString.localizedUserNotificationString(forKey: "Title", arguments: nil)
-        // 通知の本文を設定
-        content.body = NSString.localizedUserNotificationString(forKey: "Message", arguments: nil)
-        // 通知の音楽を設定
-        //content.sound = UNNotificationSound.default()
-
     }
     
    
@@ -204,23 +195,50 @@ class taskDetailViewController: UIViewController, UITextFieldDelegate, UITextVie
         memoUserDefault.set(memoCell.memoContent.text, forKey: "memo")
         memoUserDefault.synchronize()
         print(memoCell.memoContent.text)
-        print("thisismemo")
-        /*
-        if alertCell.dateTextField.text != nil {
+       
+        // 通知内容の設定
+        let content = UNMutableNotificationContent()
+        // 通知のタイトルを設定
+        content.title = NSString.localizedUserNotificationString(forKey: "Title", arguments: nil)
+        // 通知の本文を設定
+        content.body = NSString.localizedUserNotificationString(forKey: "Message", arguments: nil)
+        // 通知の音楽を設定
+        //content.sound = UNNotificationSound.default()
+        
+        if alertCell.dateTextField.text != "" {
             
             let dateFormater = DateFormatter()
             dateFormater.locale = Locale(identifier: "ja_JP")
-            dateFormater.dateFormat = "HH"
-            // 設定に必要なクラスをインスタンス化
-            var notificationTime = DateComponents()
-            let trigger: UNNotificationTrigger
-            notificationTime.hour = dateFormater.date(from: alertCell.dateTextField.text!)
-          //  notificationTime.hour = date.
+            dateFormater.dateFormat = "HH:mm"
             
-            // 12時に通知する場合
-            trigger = UNCalendarNotificationTrigger(dateMatching: notificationTime, repeats: false)
-        }*/
-        
+            //通知のタイトルと内容を設定
+            let content = UNMutableNotificationContent()
+            content.title = "タスクのお時間です！"
+            content.body = "実行できていればカレンダーにスタンプを押しましょう。"
+            content.sound = UNNotificationSound.default //通知音
+            
+            let time = dateFormater.date(from: alertCell.dateTextField.text!)
+            
+            //通知する日付を設定
+            let calendar = Calendar.current
+            let notificationTime = calendar.dateComponents([.hour, .minute] , from: time!)
+            
+            print(notificationTime)
+            print("its time")
+            
+            // 通知
+            let trigger = UNCalendarNotificationTrigger(dateMatching: notificationTime, repeats: true)
+            
+            //通知を設定
+            // 通知スタイルを指定
+            let request = UNNotificationRequest(identifier: "uuid", content: content, trigger: trigger)
+            
+            // 通知をセット
+            UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+            
+        } else {
+            UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["uuid"])
+        }
         
         //アラートのひょうじ
         let alert = UIAlertController(title: "完了", message: "タスク内容が保存されました", preferredStyle: .alert)
@@ -275,7 +293,7 @@ class taskDetailViewController: UIViewController, UITextFieldDelegate, UITextVie
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm"
         // textFieldに選択した日付を代入
-        datePickerCell.dateTextField.text = dateFormatter.string(from: termDatePicker.date)
+        datePickerCell.dateTextField.text = dateFormatter.string(from: alertTimePicker.date)
         // キーボードを閉じる
         self.view.endEditing(true)
     }
